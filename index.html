@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dagik model-viewer</title>
+    <title>Dagik AR: Venus</title>
     <!-- Import the component -->
     <script
       type="module"
@@ -13,21 +13,29 @@
       nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
     ></script>
+    <style>
+    model-viewer {
+      width: 100%;
+      height: 380px;
+      background-color: black;
+    }
+    </style>
   </head>
-  <body>
+  <body bgcolor="black" text="white">
+    <P>&nbsp;</P>
     <center>
       金星 Venus
+    <P>&nbsp;</P>
     <model-viewer
-      width: 100%;
-      height: 1000px;
-      border: 1px solid black;
       src="./sphere.glb"
       ios-src="./sphere.usdz"
-      alt="Venus model"
+      alt="Planet/Moon model"
       camera-target="0 0 0"
+      camera-orbit = "90deg 90deg 100%"
       camera-controls
       ar
-    ></model-viewer>
+    >
+    </model-viewer>
     </center>
   </body>
 </html>
