@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dagik model-viewer</title>
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </head>
+  <body>
+    <center>
+      金星 Venus
+    <model-viewer
+      width: 100%;
+      height: 1000px;
+      border: 1px solid black;
+      src="./sphere.glb"
+      ios-src="./sphere.usdz"
+      alt="Venus model"
+      auto-rotate
+      auto-rotate-delay="500"
+      rotation-per-second="10deg"
+      camera-target="0 0 0"
+      camera-controls
+      ar
+    ></model-viewer>
+    </center>
+  </body>
+</html>
